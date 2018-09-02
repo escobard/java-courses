@@ -63,3 +63,57 @@ public void greeting(
 ```
 
 ### Multiple parameters
+
+```
+public void greeting(int width, int height, boolean inColor){
+	....
+}
+
+
+// function call
+printPhoto(30, 40, true)
+```
+
+### Return values
+
+- the return types defines what the function is supposed to RETURN
+- void is used if the function is not returning anything, it doesn't create an output for us to interact with in our program
+```
+public void functionName(){
+	// internal block of code - does not return anything, useful for connection functions together
+	// like multiple .println outputs, similar to console.logs in js
+}
+```
+- changing the return value to any other variable type, expects the function to return the type of data
+```
+public String functionName(){
+
+	//
+}
+```
+
+- returning the function requries the following syntax
+```
+// requires a variable type, declaring the expected returned data type from the function call
+int returnedLikes = likePhoto(0, "Nice color!", false);
+```
+
+- we can return calculated change with the following syntax:
+```
+// Define a function with the name and parameters: makeChange(double itemCost, double dollarsProvided)
+// Calculate and return the calculated change which should be the dollarsProvided minus the itemCost
+
+// Remember to return a value you need 1) a return type and 2) a return statement
+public double makeChange(double itemCost, double dollarsProvided){
+    // variable MUST be declared first, can't be declared AND returned like in js
+    double calculateChange = dollarsProvided - itemCost;
+
+    // variable can only be returned AFTER the variable is declared
+    return calculateChange;
+}
+
+```
+
+### Casting
+
+- 
