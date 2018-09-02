@@ -116,4 +116,74 @@ public double makeChange(double itemCost, double dollarsProvided){
 
 ### Casting
 
-- 
+- turning one variable type into another, ex double to int
+```
+// returns a random number, much like in JS
+double randomNumber = Math.random();
+
+// changes the random decimal number to an integer, with casting
+int randomInt = 
+	
+	// the casting type is declared in the brackets as shown below
+	(int) randomNumber;
+```
+
+- used in a function
+
+```
+public int rollDice(){
+	// returns a random number, much like in JS
+double randomNumber = Math.random();
+
+// changes the range of the random function from 0-6
+randomNumber = randomNumber * 6;
+
+// shift range up by 1 , almost to 7
+rangeNumber = randomNumber + 1
+
+// chasts to integer, rounding the value up to 1-6
+// ex. 6.988 becomes 6
+int randomInt = (int) randomNumber;
+
+return randomInt;
+}
+```
+
+### Documentation
+
+- Java documentation is available here: https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html
+- Search on google for documentation on literally any java function, oracle is the creator of Java.
+
+### Java comments
+
+```
+// single line comments can be made like hese
+
+/* multiline 
+comment
+*/
+
+/** Java documentation (doc) comments - this can be utilized to document and output java module
+ * documentation
+ *
+ * General description of a function
+ *
+ * @param a first input parameter, named a
+ * @param b second parameter, named b
+ *
+ * @return description of return value
+ *
+*/
+
+/** 
+ *
+ * With the dice function - This dice function simulates a random dice roll
+ * For a dice with a given number of sides
+ *
+ * @param sides the number of sides of a dice
+ *
+ * @return random roll value (an int)
+ *
+*/
+
+```
