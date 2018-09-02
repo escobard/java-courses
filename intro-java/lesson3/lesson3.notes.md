@@ -45,3 +45,21 @@ public
 
 chorus();
 ```
+
+### Function parameters
+
+- The argument variable must be declared by type within the argument syntax
+```
+public void greeting(
+	
+	// this defines the type of the variable expected to be passed as an argument
+	String 
+	
+	// this defines the name of the variable, which can be used within the function scope (like JS)
+	location
+	){
+	System.out.println("Hello," + location);
+}
+```
+
+### Multiple parameters
