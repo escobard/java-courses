@@ -1,5 +1,6 @@
 package com.udacity;
 
+// base import statement for other libraries within java, super cool
 import java.util.Arrays;
 
 /**
@@ -32,9 +33,14 @@ public class Game {
 
         // initialize all chars in 3x3 game grid to '-'
         grid = new char[3][3];
+
         //fill all empty slots with -
         for (int i=0; i<3; i++){
             for (int j=0; j<3; j++){
+
+                // first argument i grabs the FIRST array's index - column
+                // second argument grabs the SECOND array's index, therefore going through each 9 spots - row
+                // iterating a total of 9 times
                 grid[i][j] = '-';
             }
         }
