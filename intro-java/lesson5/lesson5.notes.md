@@ -41,6 +41,9 @@
 	- configurations: Under Run > Configurations:
 		- Sets up the class.
 		- set up locations for source code for the compiler, and the compiled code for the VM.
+		- Can set up to run differently, depending on which type of application it is.
 		- more here: https://www.jetbrains.com/help/idea/creating-and-editing-run-debug-configurations.html
 	- Running program: 
-		- running the program in the IDE returns an output in a console or us to debug, 
+		- running the program in the IDE returns an output in a console or us to debug.
+	- Gradle: Java file directory model, with various build and testing out of the box inclusions
+		- https://gradle.org/
