@@ -47,3 +47,7 @@
 		- running the program in the IDE returns an output in a console or us to debug.
 	- Gradle: Java file directory model, with various build and testing out of the box inclusions
 		- https://gradle.org/
+	- Breakpoints: 
+		- allows for debugging  / code pause when the runtime hits a certain point.
+		- only available while in debug mode
+		- https://www.jetbrains.com/help/idea/creating-line-breakpoints.html
