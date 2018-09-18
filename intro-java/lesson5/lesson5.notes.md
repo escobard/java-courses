@@ -30,7 +30,7 @@
 	- `java HelloWorld` - runs the compiled code, outputting the file output.
 		- only runs the COMPILED code, not the source code, very important distinction.
 
-### Intelliji
+### Intellij
 
 - IDE for JS apps, from here:  https://www.jetbrains.com/idea/
 - cool basic IDE for JS projects, setup instructions here: https://www.jetbrains.com/help/idea/creating-and-running-your-first-java-application.html
@@ -38,4 +38,9 @@
 	- SDK: Frameworks which provide tweaks to the default VM / Compiler.
 	- Templates: Starting points for Java projects.
 	- Package: If we are creating an application for the web or for mobile, the base PACKAGE of the project needs to be changed, but for command line apps `com.company` works fine.
-	
+	- configurations: Under Run > Configurations:
+		- Sets up the class.
+		- set up locations for source code for the compiler, and the compiled code for the VM.
+		- more here: https://www.jetbrains.com/help/idea/creating-and-editing-run-debug-configurations.html
+	- Running program: 
+		- running the program in the IDE returns an output in a console or us to debug, 
