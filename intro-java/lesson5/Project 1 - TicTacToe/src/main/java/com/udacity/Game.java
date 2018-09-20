@@ -156,7 +156,25 @@ public class Game {
      */
     public String checkGameWinner(char [][]grid){
         String result = "None";
-        //Student code goes here ...
+        //fill all empty slots with -
+        for (int i=0; i<3; i++){
+            for (int j=0; j<3; j++){
+
+                // prints out the grid characters for each of the 9 spots
+                System.out.println("THIS IS THE CHARACTER: " +
+
+                        // this is the 2d array for the tic-tac-toe grid
+                        grid
+                                // this is the argument of the x coordinates of the array
+                                [i]
+
+                                // this is the argument of the y coordinates of the array
+                                [j]
+                        + " x is: " + i + " y is: " + j);
+
+
+            }
+        }
         return result;
     }
 
