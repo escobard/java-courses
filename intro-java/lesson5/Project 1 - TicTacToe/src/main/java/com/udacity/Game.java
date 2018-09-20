@@ -192,6 +192,23 @@ public class Game {
                         result = middleSymbol + "wins";
                     }
                 }
+
+                // sets current char value
+                char current = grid[i][j];
+
+                // tests to see if field is empty
+                boolean empty = false;
+
+                // checks if current value has an empty string
+                if (current == '-'){
+                    empty = true;
+                }
+
+                // checks empty false, result still says none, and is last coordinate in the grid
+                else if(!empty && j == 2 && i == 2 && result.contains("None")){
+                    result = "Tie"
+                }
+            }
         }
         return result;
     }
