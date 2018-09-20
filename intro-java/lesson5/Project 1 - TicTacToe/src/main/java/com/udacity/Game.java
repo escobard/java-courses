@@ -185,10 +185,11 @@ public class Game {
                 // checks to ensure this only runs during the middle of the board
                 if (i == 1 && j ==1){
                     char middleSymbol = grid[1][1];
-                    
-                    // checks for edge pattern
-                    if (grid[0][0] == middleSymbol && grid[2][2] == middleSymbol || grid[2][0] == middleSymbol && grid[0][2] == middleSymbol){
 
+                    // checks for edge match pattern
+                    if (grid[0][0] == middleSymbol && grid[2][2] == middleSymbol || grid[2][0] == middleSymbol && grid[0][2] == middleSymbol){
+                        System.out.println("WINNER WINNER CHICKEN DINNER");
+                        result = middleSymbol + "wins";
                     }
                 }
         }
