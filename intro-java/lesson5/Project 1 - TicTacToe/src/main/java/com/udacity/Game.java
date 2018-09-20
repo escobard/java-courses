@@ -167,33 +167,30 @@ public class Game {
             if (grid[i][1] == currentSymbolX && grid[i][2] == currentSymbolX){
 
                 System.out.println("WINNER WINNER CHICKEN DINNER");
+                result = currentSymbolX + "wins";
             }
 
             for (int j=0; j<3; j++){
                 // sets the current y coordinate's value
-                char currentSymbolY = grid[i][j];
+                char currentSymbolY = grid[0][j];
 
                 // ensures only runs during the first coordinate of the y axis,
                 // checks for triple matches along the y axis
-                if (grid[i][0] == currentSymbolY && grid[i][2] == currentSymbolY){
+                if (i == 0 && grid[1][j] == currentSymbolY && grid[2][j] == currentSymbolY){
 
                     System.out.println("WINNER WINNER CHICKEN DINNER");
+                    result = currentSymbolY + "wins";
                 }
 
-                // prints out the grid characters for each of the 9 spots
-                System.out.println("THIS IS THE CHARACTER: " +
+                // checks to ensure this only runs during the middle of the board
+                if (i == 1 && j ==1){
+                    char middleSymbol = grid[1][1];
+                    
+                    // checks for edge pattern
+                    if (grid[0][0] == middleSymbol && grid[2][2] == middleSymbol || grid[2][0] == middleSymbol && grid[0][2] == middleSymbol){
 
-                        // this is the 2d array for the tic-tac-toe grid
-                        grid
-                                // this is the argument of the x coordinates of the array
-                                [i]
-
-                                // this is the argument of the y coordinates of the array
-                                [j]
-                        + " x is: " + i + " y is: " + j);
-
-
-            }
+                    }
+                }
         }
         return result;
     }
