@@ -157,6 +157,9 @@ public class Game {
     public String checkGameWinner(char [][]grid){
         String result = "None";
 
+        // checks to see if all squares are filled
+        boolean complete = true;
+
         // loops through the grid to check results
         for (int i=0; i<3; i++){
 
@@ -164,49 +167,51 @@ public class Game {
             char currentSymbolX = grid[i][0];
 
             // checks for triple matches along the  x axis
-            if (grid[i][1] == currentSymbolX && grid[i][2] == currentSymbolX){
+            if (currentSymbolX != '-' && grid[i][1] == currentSymbolX && grid[i][2] == currentSymbolX){
 
                 System.out.println("WINNER WINNER CHICKEN DINNER");
                 result = currentSymbolX + "wins";
             }
 
-            for (int j=0; j<3; j++){
-                // sets the current y coordinate's value
-                char currentSymbolY = grid[0][j];
-
-                // ensures only runs during the first coordinate of the y axis,
-                // checks for triple matches along the y axis
-                if (i == 0 && grid[1][j] == currentSymbolY && grid[2][j] == currentSymbolY){
-
-                    System.out.println("WINNER WINNER CHICKEN DINNER");
-                    result = currentSymbolY + "wins";
-                }
-
-                // checks to ensure this only runs during the middle of the board
-                if (i == 1 && j ==1){
-                    char middleSymbol = grid[1][1];
-
-                    // checks for edge match pattern
-                    if (grid[0][0] == middleSymbol && grid[2][2] == middleSymbol || grid[2][0] == middleSymbol && grid[0][2] == middleSymbol){
-                        System.out.println("WINNER WINNER CHICKEN DINNER");
-                        result = middleSymbol + "wins";
-                    }
-                }
+            for (int j=0; j<3; j++) {
 
                 // sets current char value
                 char current = grid[i][j];
 
-                // tests to see if field is empty
-                boolean empty = false;
+                // sets the current y coordinate's value
+                char currentSymbolY = grid[0][j];
 
-                // checks if current value has an empty string
-                if (current == '-'){
-                    empty = true;
+                // if empty grid value is found, return true;
+                if (current == '-') {
+                    complete = false;
                 }
 
-                // checks empty false, result still says none, and is last coordinate in the grid
-                else if(!empty && j == 2 && i == 2 && result.contains("None")){
-                    result = "Tie"
+                // ensures only runs during the first coordinate of the y axis,
+                // checks for triple matches along the y axis
+
+                if (current != '-') {
+                    if (i == 0 && grid[1][j] == currentSymbolY && grid[2][j] == currentSymbolY) {
+
+                        System.out.println("WINNER WINNER CHICKEN DINNER");
+                        result = currentSymbolY + "wins";
+                    }
+
+                    // checks to ensure this only runs during the middle of the board
+                    if (i == 1 && j == 1) {
+                        char middleSymbol = grid[1][1];
+
+                        // checks for edge match pattern
+                        if (grid[0][0] == middleSymbol && grid[2][2] == middleSymbol || grid[2][0] == middleSymbol && grid[0][2] == middleSymbol) {
+                            System.out.println("WINNER WINNER CHICKEN DINNER");
+                            result = middleSymbol + "wins";
+                        }
+                    }
+
+                    // if winner is not declared
+                    if (j == 2 && i == 2 && result.contains("None") && complete) {
+                        result = "Tie";
+                    }
+
                 }
             }
         }
