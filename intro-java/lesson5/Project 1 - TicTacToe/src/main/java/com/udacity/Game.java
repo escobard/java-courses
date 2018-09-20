@@ -156,9 +156,29 @@ public class Game {
      */
     public String checkGameWinner(char [][]grid){
         String result = "None";
-        //fill all empty slots with -
+
+        // loops through the grid to check results
         for (int i=0; i<3; i++){
+
+            // sets the current x coordinate's value
+            char currentSymbolX = grid[i][0];
+
+            // checks for triple matches along the  x axis
+            if (grid[i][1] == currentSymbolX && grid[i][2] == currentSymbolX){
+
+                System.out.println("WINNER WINNER CHICKEN DINNER");
+            }
+
             for (int j=0; j<3; j++){
+                // sets the current y coordinate's value
+                char currentSymbolY = grid[i][j];
+
+                // ensures only runs during the first coordinate of the y axis,
+                // checks for triple matches along the y axis
+                if (grid[i][0] == currentSymbolY && grid[i][2] == currentSymbolY){
+
+                    System.out.println("WINNER WINNER CHICKEN DINNER");
+                }
 
                 // prints out the grid characters for each of the 9 spots
                 System.out.println("THIS IS THE CHARACTER: " +
